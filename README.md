@@ -1,0 +1,4 @@
+PinterestSDK.Xamarin
+====================
+
+PinterestSDK.Xamarin
