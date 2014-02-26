@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A5C6BA35-1E41-429F-A32A-E0753D39AF9C}</ProjectGuid>
+    <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Pinterest.SDK.BindingLibrary.XamarinIOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Pinterest.SDK.BindingLibrary.XamarinIOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\A\Resources\PinterestSDKResources.bundle\" />
+    <Folder Include="Resources\" />
+    <Folder Include="sbin\ObjectiveSharpie-0.4.40\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="Pinterest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <None Include="ApiDefinition.cs" />
+    <None Include="native\generate-bindings.sh.command" />
+    <LibraryProjectZip Include="native\PinItSDKiOS.zip" />
+    <LibraryProjectZip Include="native\PinItSDKiOS\PinItDemo.zip" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Headers" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Pinterest" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Resources" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\A\Pinterest" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\A\Resources\en.lproj\InfoPlist.strings" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\Current" />
+    <None Include="native\PinItSDKiOS\Pinterest.embeddedframework\Resources\PinterestSDKResources.bundle" />
+    <None Include="sbin\lib\sharpie-clang-parser" />
+    <None Include="sbin\Objective Sharpie.app\Contents\MacOS\Objective Sharpie" />
+    <None Include="sbin\Objective Sharpie.app\Contents\MonoBundle\config" />
+    <None Include="sbin\Objective Sharpie.app\Contents\MonoBundle\libMonoPosixHelper.dylib" />
+    <None Include="sbin\Objective Sharpie.app\Contents\MonoBundle\machine.config" />
+    <None Include="sbin\Objective Sharpie.app\Contents\Resources\MainMenu.nib" />
+    <None Include="sbin\Objective Sharpie.app\Contents\Resources\MainWindow.nib" />
+    <None Include="sbin\Objective Sharpie.app\Contents\Resources\ObjectiveSharpie.icns" />
+    <None Include="sbin\Objective Sharpie.app\Contents\Resources\sharpie-clang-parser" />
+    <None Include="sbin\Objective Sharpie.app\Contents\_CodeSignature\CodeResources" />
+    <None Include="sbin\sharpie" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="native\Pinterest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="native\PinItSDKiOS\docs\html\Classes\Pinterest.html" />
+    <Content Include="native\PinItSDKiOS\docs\html\css\styles.css" />
+    <Content Include="native\PinItSDKiOS\docs\html\css\stylesPrint.css" />
+    <Content Include="native\PinItSDKiOS\docs\html\hierarchy.html" />
+    <Content Include="native\PinItSDKiOS\docs\html\img\button_bar_background.png" />
+    <Content Include="native\PinItSDKiOS\docs\html\img\disclosure.png" />
+    <Content Include="native\PinItSDKiOS\docs\html\img\disclosure_open.png" />
+    <Content Include="native\PinItSDKiOS\docs\html\img\library_background.png" />
+    <Content Include="native\PinItSDKiOS\docs\html\img\title_background.png" />
+    <Content Include="native\PinItSDKiOS\docs\html\index.html" />
+    <Content Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\A\Headers\Pinterest.h" />
+    <Content Include="native\PinItSDKiOS\Pinterest.embeddedframework\Pinterest.framework\Versions\A\Resources\Info.plist" />
+    <Content Include="sbin\lib\lib\clang\include\altivec.h" />
+    <Content Include="sbin\lib\lib\clang\include\ammintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\arm_neon.h" />
+    <Content Include="sbin\lib\lib\clang\include\avx2intrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\avxintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\bmi2intrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\bmiintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\cpuid.h" />
+    <Content Include="sbin\lib\lib\clang\include\emmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\f16cintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\float.h" />
+    <Content Include="sbin\lib\lib\clang\include\fma4intrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\fmaintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\immintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\iso646.h" />
+    <Content Include="sbin\lib\lib\clang\include\limits.h" />
+    <Content Include="sbin\lib\lib\clang\include\lzcntintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\mm3dnow.h" />
+    <Content Include="sbin\lib\lib\clang\include\mmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\mm_malloc.h" />
+    <Content Include="sbin\lib\lib\clang\include\nmmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\pmmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\popcntintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\prfchwintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\rdseedintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\rtmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\smmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\stdalign.h" />
+    <Content Include="sbin\lib\lib\clang\include\stdarg.h" />
+    <Content Include="sbin\lib\lib\clang\include\stdbool.h" />
+    <Content Include="sbin\lib\lib\clang\include\stddef.h" />
+    <Content Include="sbin\lib\lib\clang\include\stdint.h" />
+    <Content Include="sbin\lib\lib\clang\include\stdnoreturn.h" />
+    <Content Include="sbin\lib\lib\clang\include\tgmath.h" />
+    <Content Include="sbin\lib\lib\clang\include\tmmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\unwind.h" />
+    <Content Include="sbin\lib\lib\clang\include\varargs.h" />
+    <Content Include="sbin\lib\lib\clang\include\wmmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\x86intrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\xmmintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\xopintrin.h" />
+    <Content Include="sbin\lib\lib\clang\include\__wmmintrin_aes.h" />
+    <Content Include="sbin\lib\lib\clang\include\__wmmintrin_pclmul.h" />
+    <Content Include="sbin\lib\Sharpie.Core.dll" />
+    <Content Include="sbin\lib\Sharpie.Core.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sbin\lib\Sharpie.exe" />
+    <Content Include="sbin\lib\Sharpie.exe.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sbin\Objective Sharpie.app\Contents\Info.plist" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\Mono.Security.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\mscorlib.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\Objective Sharpie.exe" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\Objective Sharpie.exe.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\Sharpie.Core.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\Sharpie.Core.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.Configuration.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.Core.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.Drawing.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.Xml.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\System.Xml.Linq.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\XamMac.dll" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\MonoBundle\XamMac.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\Background%402x.png" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\Background.png" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\altivec.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\ammintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\arm_neon.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\avx2intrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\avxintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\bmi2intrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\bmiintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\cpuid.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\emmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\f16cintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\float.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\fma4intrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\fmaintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\immintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\iso646.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\limits.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\lzcntintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\mm3dnow.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\mmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\mm_malloc.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\nmmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\pmmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\popcntintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\prfchwintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\rdseedintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\rtmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\smmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stdalign.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stdarg.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stdbool.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stddef.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stdint.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\stdnoreturn.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\tgmath.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\tmmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\unwind.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\varargs.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\wmmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\x86intrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\xmmintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\xopintrin.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\__wmmintrin_aes.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\lib\clang\include\__wmmintrin_pclmul.h" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\XamarinStudioIcon%402x.png" />
+    <Content Include="sbin\Objective Sharpie.app\Contents\Resources\XamarinStudioIcon.png" />
+  </ItemGroup>
+</Project>

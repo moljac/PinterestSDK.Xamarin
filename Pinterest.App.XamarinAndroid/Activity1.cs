@@ -31,7 +31,7 @@ namespace Pinterest.App.XamarinAndroid
 			PinItButton.DebugMode = true;				// optional
 
 			PinItButton pinIt = FindViewById<PinItButton>(Resource.Id.pin_it);
-			pinIt.ImageUrl = "http://xamarin.com/images/xamarin-logo-v2.png";
+			//pinIt.ImageUrl = "http://xamarin.com/images/xamarin-logo-v2.png";
 			pinIt.Url = "http://xamarin.com"; // optional
 			pinIt.Description = "Create Native iOS, Android, Mac and Windows apps in C#"; // optional
 
