@@ -108,4 +108,4 @@ Backup*/
 UpgradeLog*.XML
 
 .DS_Store
-Objective\ Sharpie.app
+#Objective\ Sharpie.app
