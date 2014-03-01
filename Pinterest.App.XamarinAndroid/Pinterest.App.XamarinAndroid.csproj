@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{A1A7DA2C-8970-4A8A-8D50-B0BBB5F5B04C}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -47,16 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activity1.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DemoMainActivity.cs" />
+    <Compile Include="DemoHelper.cs" />
+    <Compile Include="DemoSimple.cs" />
+    <Compile Include="DemoFromGallery.cs" />
+    <Compile Include="DemoListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Layout\Main.axml" />
+    <AndroidResource Include="Resources\Values\Colors.xml" />
+    <AndroidResource Include="Resources\Values\Dimens.xml" />
+    <AndroidResource Include="Resources\Layout\activity_demo_simple.axml" />
+    <AndroidResource Include="Resources\Layout\activity_demo.axml" />
+    <AndroidResource Include="Resources\Drawable\xamarin_x.png" />
+    <AndroidResource Include="Resources\Layout\activity_demo_from_gallery.axml" />
+    <AndroidResource Include="Resources\Values\Styles.xml" />
+    <AndroidResource Include="Resources\Values-v11\Styles.xml" />
+    <AndroidResource Include="Resources\Values-v14\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\Values\Strings.xml" />
@@ -81,4 +91,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <Folder Include="Resources\Values-v11\" />
+    <Folder Include="Resources\Values-v14\" />
+  </ItemGroup>
 </Project>

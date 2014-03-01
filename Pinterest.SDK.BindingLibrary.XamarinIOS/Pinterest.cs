@@ -6,7 +6,7 @@ using MonoTouch.UIKit;
 
 namespace Pinterest {
 
-	[BaseType (typeof (NSObject))]
+	[BaseType (typeof (NSObject), Name="Pinterest")]
 	public partial interface PinIt {
 
 		[Export ("initWithClientId:")]
