@@ -1,0 +1,4 @@
+P:\Xamarin\components\Pinterest\component\Pinterest.XamarinComponent\bin\Debug\content\lib\android\log4net.XamarinAndroid.dll.mdb
+P:\Xamarin\components\Pinterest\component\Pinterest.XamarinComponent\obj\Debug\Pinterest.XamarinComponent.csprojResolveAssemblyReference.cache
+P:\Xamarin\components\Pinterest\component\Pinterest.XamarinComponent\obj\Debug\Pinterest.XamarinComponent.dll
+P:\Xamarin\components\Pinterest\component\Pinterest.XamarinComponent\obj\Debug\Pinterest.XamarinComponent.pdb
