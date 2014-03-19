@@ -1,0 +1,80 @@
+# common definitions in here
+X_MS_BUILD	= /Library/Frameworks/Mono.framework/Versions/3.2.7/bin/xbuild
+			# xbuild # old version
+BTOUCH		=/Developer/MonoTouch/usr/bin/btouch
+MDTOOL		=/Applications/Xamarin\ Studio.app/Contents/MacOS/mdtool 
+
+RM			= rm
+ECHO		= echo
+
+DIRS		= src samples component
+
+
+
+all:		clean debug release 
+
+debug:		src-debug samples-debug 
+
+release:	src-release samples-release 
+
+src:		src-debug src-release
+
+samples:	samples-debug samples-release
+
+src-debug:	
+	cd src; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Debug \
+		/verbosity:diagnostic \
+		Pinterest.SDK.BindingLibrary.XamarinAndroid/Pinterest.SDK.BindingLibrary.XamarinAndroid.csproj \
+		; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Debug \
+		/verbosity:diagnostic \
+		Pinterest.SDK.BindingLibrary.XamarinIOS/Pinterest.SDK.BindingLibrary.XamarinIOS.csproj \
+		;
+
+src-release:	
+	cd src; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Release \
+		/verbosity:diagnostic \
+		Pinterest.SDK.BindingLibrary.XamarinAndroid/Pinterest.SDK.BindingLibrary.XamarinAndroid.csproj \
+		; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Release \
+		/verbosity:diagnostic \
+		Pinterest.SDK.BindingLibrary.XamarinIOS/Pinterest.SDK.BindingLibrary.XamarinIOS.csproj \
+		;
+
+samples-debug:	
+	cd samples; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Debug \
+		/verbosity:diagnostic \
+		Pinterest.App.XamarinAndroid/Pinterest.App.XamarinAndroid.csproj
+	# shell
+	$(MDTOOL) \
+		-v build \
+		"--configuration:Debug|iPhone" \
+		"./Pinterest.sln"
+		;
+
+samples-release:	
+	cd samples; \
+	$(X_MS_BUILD) \
+		/p:Configuration=Release \
+		/verbosity:diagnostic \
+		Pinterest.App.XamarinAndroid/Pinterest.App.XamarinAndroid.csproj
+	# shell
+	$(MDTOOL) \
+		-v build \
+		"--configuration:Release|iPhone" \
+		"./Pinterest.sln"
+		;
+
+clean:	
+	$(ECHO) cleaning up in .
+	-$(RM) -f $(EXE) $(OBJS) $(OBJLIBS)
+	-for d in $(DIRS); do (cd $$d; $(MAKE) clean ); done
+	

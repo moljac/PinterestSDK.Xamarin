@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+/Library/Frameworks/Mono.framework/Versions/Current/bin/mono --debug $MONO_OPTIONS `dirname "install"`/lib/Sharpie.exe "$@"

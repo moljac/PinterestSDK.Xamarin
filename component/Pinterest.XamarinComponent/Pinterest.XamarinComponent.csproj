@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D72D8504-40C4-4DEA-90DE-B7AF1A688525}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pinterest.XamarinComponent</RootNamespace>
+    <AssemblyName>Pinterest.XamarinComponent</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="compile.bat" />
+    <None Include="compile.sh.command" />
+    <None Include="component-create.bat" />
+    <None Include="component-create.sh" />
+    <None Include="component-create.sh.command" />
+    <None Include="content\Details.md" />
+    <None Include="content\GettingStarted.md" />
+    <None Include="content\icons\readme.md" />
+    <None Include="content\License.md" />
+    <None Include="content\Rakefile" />
+    <None Include="content\README.md" />
+    <None Include="git-add-ignored-libraries.bat" />
+    <None Include="sbin\xpkg.old\xpkg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\icons\feather_logo_CMYK.svg" />
+    <Content Include="content\icons\holisticware-apache-log4net-128x128.png" />
+    <Content Include="content\icons\holisticware-apache-log4net-512x512.png" />
+    <Content Include="content\icons\holisticware-apache-log4net.svg" />
+    <Content Include="content\icons\holisticware-bckgrd=white.svg" />
+    <Content Include="content\icons\HolisticWare.320x320.png" />
+    <Content Include="content\icons\HolisticWare.48x48.png" />
+    <Content Include="content\icons\holisticware.markdowndeep.svg" />
+    <Content Include="content\icons\holisticware.svg" />
+    <Content Include="content\icons\log4net_128x128.png" />
+    <Content Include="content\icons\log4net_512x512.png" />
+    <Content Include="content\lib\android\log4net.XamarinAndroid.dll" />
+    <Content Include="content\lib\android\log4net.XamarinAndroid.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="content\lib\android\log4net.XamarinAndroid.pdb" />
+    <Content Include="content\lib\ios\log4net.XamariniOS.dll" />
+    <Content Include="content\lib\ios\log4net.XamariniOS.pdb" />
+    <Content Include="how-to.txt" />
+    <Content Include="sbin\xpkg.old\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="sbin\xpkg.old\mdoc.exe" />
+    <Content Include="sbin\xpkg.old\Mono.Cecil.dll" />
+    <Content Include="sbin\xpkg.old\monodoc.dll" />
+    <Content Include="sbin\xpkg.old\Newtonsoft.Json.dll" />
+    <Content Include="sbin\xpkg.old\xpkg.exe" />
+    <Content Include="sbin\xpkg\mdoc.exe" />
+    <Content Include="sbin\xpkg\monodoc.dll" />
+    <Content Include="sbin\xpkg\xamarin-component.exe" />
+    <Content Include="screenshots\ddms-screenshots-emulator\device-2013-09-25-110935.png" />
+    <Content Include="screenshots\ddms-screenshots-emulator\device-2013-09-25-111022.png" />
+    <Content Include="screenshots\emulator-simulator\android-2.3.3-message-logged.png" />
+    <Content Include="screenshots\emulator-simulator\android-2.3.3-message-to-log.png" />
+    <Content Include="screenshots\emulator-simulator\android-4.x-message-logged.png" />
+    <Content Include="screenshots\emulator-simulator\android-4.x-message-to-log.png" />
+    <Content Include="screenshots\emulator-simulator\Xamarin.Android.log4net-1-message-to-be-logged.png" />
+    <Content Include="screenshots\emulator-simulator\Xamarin.Android.log4net-2-logged-message-from-file.png" />
+    <Content Include="screenshots\emulator-simulator\Xamarin.Android.log4net-filesystem-empty.png" />
+    <Content Include="screenshots\emulator-simulator\Xamarin.Android.log4net-filesystem-files-created.png" />
+    <Content Include="screenshots\emulator-simulator\Xamarin.Android.log4net-filesystem.png" />
+    <Content Include="screenshots\placeit.breezi.com\android-2.3.3-message-logged.png" />
+    <Content Include="screenshots\placeit.breezi.com\android-2.3.3-message-to-log.png" />
+    <Content Include="screenshots\placeit.breezi.com\android-4.x-message-logged.png" />
+    <Content Include="screenshots\placeit.breezi.com\android-4.x-message-to-log.png" />
+    <Content Include="screenshots\placeit.breezi.com\log4net-android-01.png" />
+    <Content Include="screenshots\placeit.breezi.com\log4net-android-02.png" />
+    <Content Include="screenshots\test-cloud\xamarin-test-cloud-android-01.png" />
+    <Content Include="screenshots\test-cloud\xamarin-test-cloud-android-02.png" />
+    <Content Include="screenshots\test-cloud\xamarin-test-cloud-android-results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\bin\" />
+    <Folder Include="content\samples\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>call compile.bat</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

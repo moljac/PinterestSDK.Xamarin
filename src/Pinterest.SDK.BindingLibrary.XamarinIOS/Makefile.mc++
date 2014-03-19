@@ -1,0 +1,19 @@
+﻿all: PinterestSDK.dll
+
+libPinterest.a:
+	@echo "It would appear that you do not have a copy of libPinterestSDK.a which"
+	@echo "is needed to build the Pinterest bindings."
+	@echo
+	@echo "You'll need to obtain a copy of libPinterestSDK.a from developer.pinterest.com"
+	@exit 1
+
+PinterestSDK.dll: Makefile Pinterest.cs Properties/AssemblyInfo.cs libPinterest.a
+	# xbuild Pinterest.SDK.BindingLibrary.XamarinIOS.csproj
+	/Developer/MonoTouch/usr/bin/btouch \
+		Pinterest.cs \
+		Properties/AssemblyInfo.cs \
+		--link-with=libPinterest.a,libPinterest.a
+
+clean:
+	-rm -f *.dll
+
