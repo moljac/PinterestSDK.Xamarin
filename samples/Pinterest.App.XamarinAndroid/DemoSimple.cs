@@ -11,21 +11,21 @@ namespace Pinterest.App.XamarinAndroid
 	[Activity]
 	public class DemoSimple : Activity
 	{
-	    private static readonly String TAG = DemoMainActivity.TAG;
-	    private static readonly String IMAGE_SOURCE = 
+		private static readonly String TAG = DemoMainActivity.TAG;
+		private static readonly String IMAGE_SOURCE = 
 						//"http://placekitten.com/500/400"
 						//"http://xamarin.com/images/xamarin-logo-v2.png"  // 404???
 						"https://vsipprogram.com/content/upload/logo/Xamarin%20Inc..zpoh_xamarin-logo-hexagon-blue.png"
 						//"http://cdn4.techworld.com/cmsdata/news/3357770/Xamarin-logo_thumb160.jpg"
 						;
-	    private static readonly String WEB_URL = 
+		private static readonly String WEB_URL = 
 						// "http://placekitten.com"
 						"http://xamarin.com"
 						;
 	
-	    private ImageView mImage;
+		private ImageView mImage;
 
-    	protected override void OnCreate (Bundle savedInstanceState)
+		protected override void OnCreate (Bundle savedInstanceState)
 		{			
 			base.OnCreate (savedInstanceState);
 			SetContentView (Resource.Layout.activity_demo_simple);
@@ -39,7 +39,7 @@ namespace Pinterest.App.XamarinAndroid
 			// TODo: not working
 			DemoHelper.RemoteImageTask rit = new DemoHelper.RemoteImageTask 
 						(
-				 		  mImage 		// ImageView to be filled (placeholder)
+						  mImage 		// ImageView to be filled (placeholder)
 						, IMAGE_SOURCE
 						);
 			rit.Execute();
@@ -58,7 +58,7 @@ namespace Pinterest.App.XamarinAndroid
 			return;
 		}
 		
-   		PinItListenerForDemo _listener = new PinItListenerForDemo() ;
+		PinItListenerForDemo _listener = new PinItListenerForDemo() ;
 			
 		internal class PinItListenerForDemo : PinItListener
 		{
@@ -66,22 +66,22 @@ namespace Pinterest.App.XamarinAndroid
 			// @Override
 			public override void OnStart() 
 			{
-			    base.OnStart();
-			    Android.Util.Log.Info(TAG, "PinItListener.onStart");
+				base.OnStart();
+				Android.Util.Log.Info(TAG, "PinItListener.onStart");
 			}
 
 			// @Override
 			public override void OnComplete(bool completed) 
 			{
-			    base.OnComplete(completed);
-			    Android.Util.Log.Info(TAG, "PinItListener.onComplete");
+				base.OnComplete(completed);
+				Android.Util.Log.Info(TAG, "PinItListener.onComplete");
 			}
 
 			// @Override
 			public override void OnException(Java.Lang.Exception e) 
 			{
-			    base.OnException(e);
-			    Android.Util.Log.Info(TAG, "PinItListener.onException");
+				base.OnException(e);
+				Android.Util.Log.Info(TAG, "PinItListener.onException");
 			}
 		}
 	}
