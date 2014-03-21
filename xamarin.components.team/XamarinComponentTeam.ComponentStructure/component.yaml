@@ -1,0 +1,15 @@
+version: 1.0
+name: Pinterest SDK
+id: pinterestsdk
+publisher: Xamarin Inc.
+publisher-url: http://xamarin.com
+summary: Pinterest SDK for iOS and Android enables the use of Pinterest SDK in Xamarin mobile applications
+libraries:
+  ios: ../monotouch-bindings/Pinterest/binding/PinterestSDK.dll
+  android: src/bindings/Pinterest.XamarinAndroid/Pinterest.XamarinAndroid.dll
+samples:
+  - name: "Android Sample"
+    path: src/samples/Pinterest.XamarinAndroid/Pinterest.App.XamarinAndroid.ComponentStore.sln
+  - name: "iOS Sample"
+    path: ../monotouch-bindings/Pinterest/samples/PinterestSample/PinterestSample.sln
+    configuration: "Release|iPhone"	

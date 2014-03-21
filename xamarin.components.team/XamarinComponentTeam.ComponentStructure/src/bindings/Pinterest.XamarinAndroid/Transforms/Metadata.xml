@@ -1,0 +1,13 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr path="/api/package[@name='com.pinterest.pinit']" name="managedName">PinterestSDK</attr>
+  <attr path="/api/package[@name='com.pinterest.pinit.assets']" name="managedName">PinterestSDK.Assets</attr>
+  <attr path="/api/package[@name='com.pinterest.pinit.assets.buttons']" name="managedName">PinterestSDK.Assets.Buttons</attr>
+  <attr path="/api/package[@name='com.pinterest.pinit.exceptions']" name="managedName">PinterestSDK.Exceptions</attr>
+</metadata>
